@@ -1,41 +1,22 @@
-# Uncle Engineer (calculatesubmarine)
+# calculatesubmarine
+
+This project is to explain how to upload Python project into Pypi Package.
+This project include; 
+- Calculate traveling distance of submarine
+- Calculate fuel of submarine
+- Calculate Battery of submarine
+
+How to calcualte
+- You have to insert price, budget, distance(km)
 
 
 
-สวัสดีจร้าาาาทุกคน ไลบรารี่นี้เป็นโปรแกรมที่ลุงเขียนขึ้นมาเพื่อเผยแพร่เป็นวิทยาทาน
-ให้ทุกคนได้ศึกษาภาษา Python แบบง่ายๆ อยากให้คนไทยเก่งเทีบยเท่าต่างชาติ ช่วย
-กันพัฒนาประเทศเราให้ก้าวหน้า พึ่งตัวเองดีที่สุด ถ้ามัวแต่รอรัฐบาลสนับสนุนก็คงอีก 1000 ปี 555
-
-เวอร์ชั่นนี้มีอะไรบ้าง
-
-  - เช็คราคาหุ้นไทย 
-  - อื่นๆ ลุงจะทยอยลงเรื่อยๆนะจ๊ะ
-
-# เช็คราคาหุ้นไทย (thaistock())
-
-  - เช็คราคาแบบเรียลไทม์
-  - เช็คราคาเปลี่ยนกี่บาท
-  - เช็คเปอร์เซ็นเปลี่ยนแปลง
-  - เช็คว่าราคาอัพเดตตอนไหน
-
-
-
-
-
-### วิธีติดตั้งแสนง่าย
-
-ไปกดไลค์เพจ ก่อน [ลุงวิศวกร สอนคำนวณ](https://www.facebook.com/UncleEngineer)  ฮ่าาา ไม่บังคับ (กดไลค์หน่อยๆ 555)
-
-เราจะติดตั้งผ่านเจ้า pip
+#How to install pip
 
 ```sh
 pip install calculatesubmarine
 ```
 
-ง่ายไหมล่ะ
-
-วิธีใช้ก็ง่ายมาก
-- เปิด Python แล้วพิพม์ตามนี้เลย
 
 Example 1
 
@@ -79,3 +60,29 @@ tesla = ElectricSubmarine(40000,2000000,100000) #price+budget
 	Navykongtab.Goto('Japan',10000)
 	print(Navykongtab.BudgetRemaining)
 ```
+
+
+#file setup.py
+- You have to renew some detail about project (name,author, keyword, ..)
+
+#file __init__
+
+from calculatesubmarine.submarine import Submarine
+from calculatesubmarine.submarine import ElectricSubmarine
+
+# Go to command prompt
+--pip install twine --
+
+#Open cmd again
+cd calculatesubmarine
+
+--python setup.py sdist--
+to generate package to server
+(you will ahve dist folder in package folder)
+
+--twine upload dist/*--
+Enter user and password
+
+Uploading to server then you can go to check at https://pypi.org/project/calculatesubmarine/
+
+Thank you
